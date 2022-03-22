@@ -1,0 +1,6 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+function toArray(value) {
+  return Array.isArray(value) ? value : [value];
+}
+exports.default = toArray;

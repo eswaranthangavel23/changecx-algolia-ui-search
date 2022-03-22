@@ -1,0 +1,6 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+function getObjectType(object) {
+  return Object.prototype.toString.call(object).slice(8, -1);
+}
+exports.default = getObjectType;

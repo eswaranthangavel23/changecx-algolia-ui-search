@@ -1,0 +1,97 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+var _preact = require('preact');
+var _classnames = require('classnames');
+var _classnamesDefault = _parcelHelpers.interopDefault(_classnames);
+var _libUtils = require('../../lib/utils');
+var _libSuit = require('../../lib/suit');
+var _connectorsRelevantSortConnectRelevantSort = require('../../connectors/relevant-sort/connectRelevantSort');
+var _connectorsRelevantSortConnectRelevantSortDefault = _parcelHelpers.interopDefault(_connectorsRelevantSortConnectRelevantSort);
+var _componentsRelevantSortRelevantSort = require('../../components/RelevantSort/RelevantSort');
+var _componentsRelevantSortRelevantSortDefault = _parcelHelpers.interopDefault(_componentsRelevantSortRelevantSort);
+var _defaultTemplates = require('./defaultTemplates');
+var _defaultTemplatesDefault = _parcelHelpers.interopDefault(_defaultTemplates);
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
+    if (enumerableOnly) symbols = symbols.filter(function (sym) {
+      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+    });
+    keys.push.apply(keys, symbols);
+  }
+  return keys;
+}
+function _objectSpread(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+    if (i % 2) {
+      ownKeys(Object(source), true).forEach(function (key) {
+        _defineProperty(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(Object(source)).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
+    }
+  }
+  return target;
+}
+function _defineProperty(obj, key, value) {
+  if ((key in obj)) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+  return obj;
+}
+var withUsage = _libUtils.createDocumentationMessageGenerator({
+  name: 'relevant-sort'
+});
+var suit = _libSuit.component('RelevantSort');
+var renderer = function renderer(_ref) {
+  var isRelevantSorted = _ref.isRelevantSorted, isVirtualReplica = _ref.isVirtualReplica, refine = _ref.refine, widgetParams = _ref.widgetParams;
+  var container = widgetParams.container, cssClasses = widgetParams.cssClasses, templates = widgetParams.templates;
+  _preact.render(_preact.h(_componentsRelevantSortRelevantSortDefault.default, {
+    cssClasses: cssClasses,
+    templates: templates,
+    isRelevantSorted: isRelevantSorted,
+    isVirtualReplica: isVirtualReplica,
+    refine: refine
+  }), container);
+};
+var relevantSort = function relevantSort(widgetParams) {
+  var container = widgetParams.container, _widgetParams$templat = widgetParams.templates, userTemplates = _widgetParams$templat === void 0 ? {} : _widgetParams$templat, _widgetParams$cssClas = widgetParams.cssClasses, userCssClasses = _widgetParams$cssClas === void 0 ? {} : _widgetParams$cssClas;
+  if (!container) {
+    throw new Error(withUsage('The `container` option is required.'));
+  }
+  var cssClasses = {
+    root: _classnamesDefault.default(suit(), userCssClasses.root),
+    text: _classnamesDefault.default(suit({
+      descendantName: 'text'
+    }), userCssClasses.text),
+    button: _classnamesDefault.default(suit({
+      descendantName: 'button'
+    }), userCssClasses.button)
+  };
+  var templates = _objectSpread(_objectSpread({}, _defaultTemplatesDefault.default), userTemplates);
+  var containerNode = _libUtils.getContainerNode(container);
+  var makeWidget = _connectorsRelevantSortConnectRelevantSortDefault.default(renderer, function () {
+    _preact.render(null, containerNode);
+  });
+  return _objectSpread(_objectSpread({}, makeWidget({
+    container: containerNode,
+    cssClasses: cssClasses,
+    templates: templates
+  })), {}, {
+    $$widgetType: 'ais.relevantSort'
+  });
+};
+exports.default = relevantSort;

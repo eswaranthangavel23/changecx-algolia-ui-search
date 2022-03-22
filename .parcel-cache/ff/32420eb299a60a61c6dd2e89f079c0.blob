@@ -1,0 +1,37 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="a690fc76a6e1d588306fec67d3603d7b" type="image/x-icon">
+    <link rel="stylesheet" href="7b2f5e1e4034b6fe5e0351e27cf2c93a">
+
+    <title>InstantSearch | Autocomplete</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header-wrapper wrapper">
+        <nav class="header-nav">
+          <a href="/">Home</a>
+        </nav>
+        <div id="autocomplete"></div>
+      </div>
+    </header>
+
+    <div class="container wrapper">
+      <div>
+        <div id="categories"></div>
+      </div>
+      <div>
+        <!-- <img src="iphone-banner.png" alt="iPhone banner" class="banner" /> -->
+
+        <div id="hits"></div>
+        <div id="pagination"></div>
+      </div>
+    </div>
+
+    <script src="9cad3a26f992cecd2c5d92db6c6794e1"></script>
+    <script src="2e475855cf3d57e27812aecb9abab988"></script>
+  </body>
+</html>

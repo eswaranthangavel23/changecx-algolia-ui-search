@@ -1,0 +1,9 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+exports.default = {
+  text: '',
+  button: function button(_ref) {
+    var isRelevantSorted = _ref.isRelevantSorted;
+    return isRelevantSorted ? 'See all results' : 'See relevant results';
+  }
+};

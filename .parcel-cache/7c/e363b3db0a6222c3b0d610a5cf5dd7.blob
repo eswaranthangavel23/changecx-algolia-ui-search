@@ -1,0 +1,7 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+var _libInsights = require('../../lib/insights');
+var _connectInfiniteHits = require('./connectInfiniteHits');
+var _connectInfiniteHitsDefault = _parcelHelpers.interopDefault(_connectInfiniteHits);
+var connectInfiniteHitsWithInsights = _libInsights.withInsights(_connectInfiniteHitsDefault.default);
+exports.default = connectInfiniteHitsWithInsights;

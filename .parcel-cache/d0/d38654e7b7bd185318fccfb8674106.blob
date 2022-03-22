@@ -1,0 +1,71 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+var _preact = require('preact');
+var _classnames = require('classnames');
+var _classnamesDefault = _parcelHelpers.interopDefault(_classnames);
+var _libUtils = require('../../lib/utils');
+var _TemplateTemplate = require('../Template/Template');
+var _TemplateTemplateDefault = _parcelHelpers.interopDefault(_TemplateTemplate);
+function _extends() {
+  _extends = Object.assign || (function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+    return target;
+  });
+  return _extends.apply(this, arguments);
+}
+function _defineProperty(obj, key, value) {
+  if ((key in obj)) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+  return obj;
+}
+function MenuSelect(_ref) {
+  var cssClasses = _ref.cssClasses, templateProps = _ref.templateProps, items = _ref.items, refine = _ref.refine;
+  var _ref2 = _libUtils.find(items, function (item) {
+    return item.isRefined;
+  }) || ({
+    value: ''
+  }), selectedValue = _ref2.value;
+  return _preact.h("div", {
+    className: _classnamesDefault.default(cssClasses.root, _defineProperty({}, cssClasses.noRefinementRoot, items.length === 0))
+  }, _preact.h("select", {
+    className: cssClasses.select,
+    value: selectedValue,
+    onChange: function onChange(event) {
+      refine(event.target.value);
+    }
+  }, _preact.h(_TemplateTemplateDefault.default, _extends({}, templateProps, {
+    templateKey: "defaultOption",
+    rootTagName: "option",
+    rootProps: {
+      value: '',
+      className: cssClasses.option
+    }
+  })), items.map(function (item) {
+    return _preact.h(_TemplateTemplateDefault.default, _extends({}, templateProps, {
+      templateKey: "item",
+      rootTagName: "option",
+      rootProps: {
+        value: item.value,
+        className: cssClasses.option
+      },
+      key: item.value,
+      data: item
+    }));
+  })));
+}
+exports.default = MenuSelect;

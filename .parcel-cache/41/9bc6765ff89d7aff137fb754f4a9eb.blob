@@ -1,0 +1,6 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+function isDomElement(object) {
+  return object instanceof HTMLElement || Boolean(object) && object.nodeType > 0;
+}
+exports.default = isDomElement;

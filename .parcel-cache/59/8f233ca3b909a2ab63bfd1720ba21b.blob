@@ -1,0 +1,9 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+function getPropertyByPath(object, path) {
+  var parts = Array.isArray(path) ? path : path.split('.');
+  return parts.reduce(function (current, key) {
+    return current && current[key];
+  }, object);
+}
+exports.default = getPropertyByPath;

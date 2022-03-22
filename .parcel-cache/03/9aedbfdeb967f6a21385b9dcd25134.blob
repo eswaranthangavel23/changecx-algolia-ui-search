@@ -1,0 +1,14 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "serializePayload", function () {
+  return serializePayload;
+});
+_parcelHelpers.export(exports, "deserializePayload", function () {
+  return deserializePayload;
+});
+function serializePayload(payload) {
+  return btoa(encodeURIComponent(JSON.stringify(payload)));
+}
+function deserializePayload(payload) {
+  return JSON.parse(decodeURIComponent(atob(payload)));
+}

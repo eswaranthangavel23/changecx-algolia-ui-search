@@ -1,0 +1,130 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+var _preact = require('preact');
+var _classnames = require('classnames');
+var _classnamesDefault = _parcelHelpers.interopDefault(_classnames);
+var _componentsRefinementListRefinementList = require('../../components/RefinementList/RefinementList');
+var _componentsRefinementListRefinementListDefault = _parcelHelpers.interopDefault(_componentsRefinementListRefinementList);
+var _connectorsNumericMenuConnectNumericMenu = require('../../connectors/numeric-menu/connectNumericMenu');
+var _connectorsNumericMenuConnectNumericMenuDefault = _parcelHelpers.interopDefault(_connectorsNumericMenuConnectNumericMenu);
+var _defaultTemplates = require('./defaultTemplates');
+var _defaultTemplatesDefault = _parcelHelpers.interopDefault(_defaultTemplates);
+var _libUtils = require('../../lib/utils');
+var _libSuit = require('../../lib/suit');
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
+    if (enumerableOnly) symbols = symbols.filter(function (sym) {
+      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+    });
+    keys.push.apply(keys, symbols);
+  }
+  return keys;
+}
+function _objectSpread(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+    if (i % 2) {
+      ownKeys(Object(source), true).forEach(function (key) {
+        _defineProperty(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(Object(source)).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
+    }
+  }
+  return target;
+}
+function _defineProperty(obj, key, value) {
+  if ((key in obj)) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+  return obj;
+}
+var withUsage = _libUtils.createDocumentationMessageGenerator({
+  name: 'numeric-menu'
+});
+var suit = _libSuit.component('NumericMenu');
+var renderer = function renderer(_ref) {
+  var containerNode = _ref.containerNode, attribute = _ref.attribute, cssClasses = _ref.cssClasses, renderState = _ref.renderState, templates = _ref.templates;
+  return function (_ref2, isFirstRendering) {
+    var createURL = _ref2.createURL, instantSearchInstance = _ref2.instantSearchInstance, refine = _ref2.refine, items = _ref2.items;
+    if (isFirstRendering) {
+      renderState.templateProps = _libUtils.prepareTemplateProps({
+        defaultTemplates: _defaultTemplatesDefault.default,
+        templatesConfig: instantSearchInstance.templatesConfig,
+        templates: templates
+      });
+      return;
+    }
+    _preact.render(_preact.h(_componentsRefinementListRefinementListDefault.default, {
+      createURL: createURL,
+      cssClasses: cssClasses,
+      facetValues: items,
+      templateProps: renderState.templateProps,
+      toggleRefinement: refine,
+      attribute: attribute
+    }), containerNode);
+  };
+};
+var numericMenu = function numericMenu(widgetParams) {
+  var _ref3 = widgetParams || ({}), container = _ref3.container, attribute = _ref3.attribute, items = _ref3.items, _ref3$cssClasses = _ref3.cssClasses, userCssClasses = _ref3$cssClasses === void 0 ? {} : _ref3$cssClasses, _ref3$templates = _ref3.templates, templates = _ref3$templates === void 0 ? _defaultTemplatesDefault.default : _ref3$templates, transformItems = _ref3.transformItems;
+  if (!container) {
+    throw new Error(withUsage('The `container` option is required.'));
+  }
+  var containerNode = _libUtils.getContainerNode(container);
+  var cssClasses = {
+    root: _classnamesDefault.default(suit(), userCssClasses.root),
+    noRefinementRoot: _classnamesDefault.default(suit({
+      modifierName: 'noRefinement'
+    }), userCssClasses.noRefinementRoot),
+    list: _classnamesDefault.default(suit({
+      descendantName: 'list'
+    }), userCssClasses.list),
+    item: _classnamesDefault.default(suit({
+      descendantName: 'item'
+    }), userCssClasses.item),
+    selectedItem: _classnamesDefault.default(suit({
+      descendantName: 'item',
+      modifierName: 'selected'
+    }), userCssClasses.selectedItem),
+    label: _classnamesDefault.default(suit({
+      descendantName: 'label'
+    }), userCssClasses.label),
+    radio: _classnamesDefault.default(suit({
+      descendantName: 'radio'
+    }), userCssClasses.radio),
+    labelText: _classnamesDefault.default(suit({
+      descendantName: 'labelText'
+    }), userCssClasses.labelText)
+  };
+  var specializedRenderer = renderer({
+    containerNode: containerNode,
+    attribute: attribute,
+    cssClasses: cssClasses,
+    renderState: {},
+    templates: templates
+  });
+  var makeWidget = _connectorsNumericMenuConnectNumericMenuDefault.default(specializedRenderer, function () {
+    return _preact.render(null, containerNode);
+  });
+  return _objectSpread(_objectSpread({}, makeWidget({
+    attribute: attribute,
+    items: items,
+    transformItems: transformItems
+  })), {}, {
+    $$widgetType: 'ais.numericMenu'
+  });
+};
+exports.default = numericMenu;

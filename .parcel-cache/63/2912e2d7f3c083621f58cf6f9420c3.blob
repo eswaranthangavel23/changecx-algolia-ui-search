@@ -1,0 +1,9 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "isModifierEvent", function () {
+  return isModifierEvent;
+});
+function isModifierEvent(event) {
+  const isMiddleClick = event.button === 1;
+  return isMiddleClick || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey;
+}

@@ -1,0 +1,22 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+var _preact = require('preact');
+var _classnames = require('classnames');
+var _classnamesDefault = _parcelHelpers.interopDefault(_classnames);
+function Selector(_ref) {
+  var currentValue = _ref.currentValue, options = _ref.options, cssClasses = _ref.cssClasses, setValue = _ref.setValue;
+  return _preact.h("select", {
+    className: _classnamesDefault.default(cssClasses.select),
+    onChange: function onChange(event) {
+      return setValue(event.target.value);
+    },
+    value: ("").concat(currentValue)
+  }, options.map(function (option) {
+    return _preact.h("option", {
+      className: _classnamesDefault.default(cssClasses.option),
+      key: option.label + option.value,
+      value: ("").concat(option.value)
+    }, option.label);
+  }));
+}
+exports.default = Selector;

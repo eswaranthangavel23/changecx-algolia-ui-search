@@ -1,0 +1,120 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+var _preact = require('preact');
+var _classnames = require('classnames');
+var _classnamesDefault = _parcelHelpers.interopDefault(_classnames);
+var _connectorsHitsConnectHits = require('../../connectors/hits/connectHits');
+var _connectorsHitsConnectHitsDefault = _parcelHelpers.interopDefault(_connectorsHitsConnectHits);
+var _componentsHitsHits = require('../../components/Hits/Hits');
+var _componentsHitsHitsDefault = _parcelHelpers.interopDefault(_componentsHitsHits);
+var _defaultTemplates = require('./defaultTemplates');
+var _defaultTemplatesDefault = _parcelHelpers.interopDefault(_defaultTemplates);
+var _libUtils = require('../../lib/utils');
+var _libSuit = require('../../lib/suit');
+var _libInsights = require('../../lib/insights');
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
+    if (enumerableOnly) symbols = symbols.filter(function (sym) {
+      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+    });
+    keys.push.apply(keys, symbols);
+  }
+  return keys;
+}
+function _objectSpread(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+    if (i % 2) {
+      ownKeys(Object(source), true).forEach(function (key) {
+        _defineProperty(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(Object(source)).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
+    }
+  }
+  return target;
+}
+function _defineProperty(obj, key, value) {
+  if ((key in obj)) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+  return obj;
+}
+var withUsage = _libUtils.createDocumentationMessageGenerator({
+  name: 'hits'
+});
+var suit = _libSuit.component('Hits');
+var HitsWithInsightsListener = _libInsights.withInsightsListener(_componentsHitsHitsDefault.default);
+var renderer = function renderer(_ref) {
+  var renderState = _ref.renderState, cssClasses = _ref.cssClasses, containerNode = _ref.containerNode, templates = _ref.templates;
+  return function (_ref2, isFirstRendering) {
+    var receivedHits = _ref2.hits, results = _ref2.results, instantSearchInstance = _ref2.instantSearchInstance, insights = _ref2.insights, bindEvent = _ref2.bindEvent;
+    if (isFirstRendering) {
+      renderState.templateProps = _libUtils.prepareTemplateProps({
+        defaultTemplates: _defaultTemplatesDefault.default,
+        templatesConfig: instantSearchInstance.templatesConfig,
+        templates: templates
+      });
+      return;
+    }
+    _preact.render(_preact.h(HitsWithInsightsListener, {
+      cssClasses: cssClasses,
+      hits: receivedHits,
+      results: results,
+      templateProps: renderState.templateProps,
+      insights: insights,
+      sendEvent: function sendEvent(event) {
+        instantSearchInstance.sendEventToInsights(event);
+      },
+      bindEvent: bindEvent
+    }), containerNode);
+  };
+};
+var hits = function hits(widgetParams) {
+  var _ref3 = widgetParams || ({}), container = _ref3.container, escapeHTML = _ref3.escapeHTML, transformItems = _ref3.transformItems, _ref3$templates = _ref3.templates, templates = _ref3$templates === void 0 ? _defaultTemplatesDefault.default : _ref3$templates, _ref3$cssClasses = _ref3.cssClasses, userCssClasses = _ref3$cssClasses === void 0 ? {} : _ref3$cssClasses;
+  if (!container) {
+    throw new Error(withUsage('The `container` option is required.'));
+  }
+  var containerNode = _libUtils.getContainerNode(container);
+  var cssClasses = {
+    root: _classnamesDefault.default(suit(), userCssClasses.root),
+    emptyRoot: _classnamesDefault.default(suit({
+      modifierName: 'empty'
+    }), userCssClasses.emptyRoot),
+    list: _classnamesDefault.default(suit({
+      descendantName: 'list'
+    }), userCssClasses.list),
+    item: _classnamesDefault.default(suit({
+      descendantName: 'item'
+    }), userCssClasses.item)
+  };
+  var specializedRenderer = renderer({
+    containerNode: containerNode,
+    cssClasses: cssClasses,
+    renderState: {},
+    templates: templates
+  });
+  var makeWidget = _libInsights.withInsights(_connectorsHitsConnectHitsDefault.default)(specializedRenderer, function () {
+    return _preact.render(null, containerNode);
+  });
+  return _objectSpread(_objectSpread({}, makeWidget({
+    escapeHTML: escapeHTML,
+    transformItems: transformItems
+  })), {}, {
+    $$widgetType: 'ais.hits'
+  });
+};
+exports.default = hits;

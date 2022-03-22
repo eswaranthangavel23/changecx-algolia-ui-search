@@ -1,0 +1,8 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "searchClient", function () {
+  return searchClient;
+});
+var _algoliasearchLite = require('algoliasearch/lite');
+var _algoliasearchLiteDefault = _parcelHelpers.interopDefault(_algoliasearchLite);
+const searchClient = _algoliasearchLiteDefault.default('RA46FT2Q5G', '69a1fff0143c7121bc2f35825680b272');

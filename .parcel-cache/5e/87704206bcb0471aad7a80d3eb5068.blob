@@ -1,0 +1,15 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "withInsights", function () {
+  return _clientDefault.default;
+});
+_parcelHelpers.export(exports, "inferInsightsPayload", function () {
+  return _client.inferPayload;
+});
+_parcelHelpers.export(exports, "withInsightsListener", function () {
+  return _listenerDefault.default;
+});
+var _client = require('./client');
+var _clientDefault = _parcelHelpers.interopDefault(_client);
+var _listener = require('./listener');
+var _listenerDefault = _parcelHelpers.interopDefault(_listener);

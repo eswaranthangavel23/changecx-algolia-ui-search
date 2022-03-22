@@ -1,0 +1,10 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+var _getObjectType = require('./getObjectType');
+var _getObjectTypeDefault = _parcelHelpers.interopDefault(_getObjectType);
+function checkRendering(rendering, usage) {
+  if (rendering === undefined || typeof rendering !== 'function') {
+    throw new Error(("The render function is not valid (received type ").concat(_getObjectTypeDefault.default(rendering), ").\n\n").concat(usage));
+  }
+}
+exports.default = checkRendering;

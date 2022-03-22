@@ -1,0 +1,9 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+function escapeRefinement(value) {
+  if (typeof value === 'number' && value < 0) {
+    value = String(value).replace(/^-/, '\\-');
+  }
+  return value;
+}
+exports.default = escapeRefinement;

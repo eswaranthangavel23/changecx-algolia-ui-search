@@ -1,0 +1,6 @@
+require('@algolia/autocomplete-theme-classic');
+require('../style.css');
+var _autocomplete = require('./autocomplete');
+var _instantsearch = require('./instantsearch');
+_instantsearch.search.start();
+_autocomplete.startAutocomplete();
