@@ -48,7 +48,7 @@ search.addWidgets([
         image:item.images[0].url,
         category:"Furniture",
         comments: "comments",
-        sale:`$ ${(item.price.centAmount / 100)}.00`,
+        sale:`$${(item.price.centAmount / 100)}`,
         // eslint-disable-next-line @typescript-eslint/camelcase
         sale_price: 23,
       }));
