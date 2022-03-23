@@ -4257,7 +4257,7 @@ virtualSearchBox(), hierarchicalMenuWithHeader({
               {{name.en}}
             </h1>
             <div>            
-              <strong>{{sale}}</strong>
+              Price <strong>{{sale}}</strong>
             </div>
           </div>
           </div>
@@ -51605,4 +51605,4 @@ function isModifierEvent(event) {
 
 },{"@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}]},["2Hx2T","5e1eZ"], "5e1eZ", "parcelRequire56cc")
 
-//# sourceMappingURL=index.d38910a9.js.map
+//# sourceMappingURL=index.HASH_REF_912fe0cf27f5dbf85fb30ee1d38910a9.js.map
