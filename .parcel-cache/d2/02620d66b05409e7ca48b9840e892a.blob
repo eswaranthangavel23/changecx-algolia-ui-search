@@ -1,0 +1,56 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "warn", function () {
+  return warn;
+});
+_parcelHelpers.export(exports, "deprecate", function () {
+  return deprecate;
+});
+_parcelHelpers.export(exports, "warning", function () {
+  return _warning;
+});
+var _noop = require('./noop');
+var _noopDefault = _parcelHelpers.interopDefault(_noop);
+/**
+* Logs a warning when this function is called, in development environment only.
+*/
+var deprecate = function deprecate(fn) {
+  return fn;
+};
+/**
+* Logs a warning
+* This is used to log issues in development environment only.
+*/
+var warn = _noopDefault.default;
+/**
+* Logs a warning if the condition is not met.
+* This is used to log issues in development environment only.
+*/
+var _warning = _noopDefault.default;
+if ("development" === 'development') {
+  warn = function warn(message) {
+    // eslint-disable-next-line no-console
+    console.warn(("[InstantSearch.js]: ").concat(message.trim()));
+  };
+  deprecate = function deprecate(fn, message) {
+    var hasAlreadyPrinted = false;
+    return function () {
+      if (!hasAlreadyPrinted) {
+        hasAlreadyPrinted = true;
+        warn(message);
+      }
+      return fn.apply(void 0, arguments);
+    };
+  };
+  _warning = function warning(condition, message) {
+    if (condition) {
+      return;
+    }
+    var hasAlreadyPrinted = _warning.cache[message];
+    if (!hasAlreadyPrinted) {
+      _warning.cache[message] = true;
+      warn(message);
+    }
+  };
+  _warning.cache = {};
+}

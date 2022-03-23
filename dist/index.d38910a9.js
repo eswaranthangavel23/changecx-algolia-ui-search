@@ -4218,7 +4218,7 @@ search.addWidgets([_instantsearchJsEsWidgets.configure({
 // state parameter.
 virtualSearchBox(), hierarchicalMenuWithHeader({
   container: '#categories',
-  attributes: [INSTANT_SEARCH_HIERARCHICAL_ATTRIBUTE, 'hierarchicalCategories.en.lvl1']
+  attributes: [INSTANT_SEARCH_HIERARCHICAL_ATTRIBUTE, 'hierarchicalCategories.en.lvl1', 'hierarchicalCategories.en.lvl2']
 }), _instantsearchJsEsWidgets.hits({
   container: '#hits',
   transformItems(items) {

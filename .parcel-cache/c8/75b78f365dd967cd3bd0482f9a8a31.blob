@@ -1,0 +1,108 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+var _preact = require('preact');
+var _classnames = require('classnames');
+var _classnamesDefault = _parcelHelpers.interopDefault(_classnames);
+var _componentsCurrentRefinementsCurrentRefinements = require('../../components/CurrentRefinements/CurrentRefinements');
+var _componentsCurrentRefinementsCurrentRefinementsDefault = _parcelHelpers.interopDefault(_componentsCurrentRefinementsCurrentRefinements);
+var _connectorsCurrentRefinementsConnectCurrentRefinements = require('../../connectors/current-refinements/connectCurrentRefinements');
+var _connectorsCurrentRefinementsConnectCurrentRefinementsDefault = _parcelHelpers.interopDefault(_connectorsCurrentRefinementsConnectCurrentRefinements);
+var _libUtils = require('../../lib/utils');
+var _libSuit = require('../../lib/suit');
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
+    if (enumerableOnly) symbols = symbols.filter(function (sym) {
+      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+    });
+    keys.push.apply(keys, symbols);
+  }
+  return keys;
+}
+function _objectSpread(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+    if (i % 2) {
+      ownKeys(Object(source), true).forEach(function (key) {
+        _defineProperty(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(Object(source)).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
+    }
+  }
+  return target;
+}
+function _defineProperty(obj, key, value) {
+  if ((key in obj)) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+  return obj;
+}
+var withUsage = _libUtils.createDocumentationMessageGenerator({
+  name: 'current-refinements'
+});
+var suit = _libSuit.component('CurrentRefinements');
+var renderer = function renderer(_ref, isFirstRender) {
+  var items = _ref.items, widgetParams = _ref.widgetParams;
+  if (isFirstRender) {
+    return;
+  }
+  var container = widgetParams.container, cssClasses = widgetParams.cssClasses;
+  _preact.render(_preact.h(_componentsCurrentRefinementsCurrentRefinementsDefault.default, {
+    cssClasses: cssClasses,
+    items: items
+  }), container);
+};
+var currentRefinements = function currentRefinements(widgetParams) {
+  var _ref2 = widgetParams || ({}), container = _ref2.container, includedAttributes = _ref2.includedAttributes, excludedAttributes = _ref2.excludedAttributes, _ref2$cssClasses = _ref2.cssClasses, userCssClasses = _ref2$cssClasses === void 0 ? {} : _ref2$cssClasses, transformItems = _ref2.transformItems;
+  if (!container) {
+    throw new Error(withUsage('The `container` option is required.'));
+  }
+  var containerNode = _libUtils.getContainerNode(container);
+  var cssClasses = {
+    root: _classnamesDefault.default(suit(), userCssClasses.root),
+    list: _classnamesDefault.default(suit({
+      descendantName: 'list'
+    }), userCssClasses.list),
+    item: _classnamesDefault.default(suit({
+      descendantName: 'item'
+    }), userCssClasses.item),
+    label: _classnamesDefault.default(suit({
+      descendantName: 'label'
+    }), userCssClasses.label),
+    category: _classnamesDefault.default(suit({
+      descendantName: 'category'
+    }), userCssClasses.category),
+    categoryLabel: _classnamesDefault.default(suit({
+      descendantName: 'categoryLabel'
+    }), userCssClasses.categoryLabel),
+    delete: _classnamesDefault.default(suit({
+      descendantName: 'delete'
+    }), userCssClasses.delete)
+  };
+  var makeWidget = _connectorsCurrentRefinementsConnectCurrentRefinementsDefault.default(renderer, function () {
+    return _preact.render(null, containerNode);
+  });
+  return _objectSpread(_objectSpread({}, makeWidget({
+    container: containerNode,
+    cssClasses: cssClasses,
+    includedAttributes: includedAttributes,
+    excludedAttributes: excludedAttributes,
+    transformItems: transformItems
+  })), {}, {
+    $$widgetType: 'ais.currentRefinements'
+  });
+};
+exports.default = currentRefinements;

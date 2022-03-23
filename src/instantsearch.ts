@@ -35,6 +35,7 @@ search.addWidgets([
     attributes: [
       INSTANT_SEARCH_HIERARCHICAL_ATTRIBUTE,
       'hierarchicalCategories.en.lvl1',
+      'hierarchicalCategories.en.lvl2',
     ],
   }),
   hits({

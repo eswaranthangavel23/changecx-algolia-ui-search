@@ -1,0 +1,9 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+exports.default = {
+  header: '',
+  loader: '',
+  item: function item(_item) {
+    return JSON.stringify(_item);
+  }
+};

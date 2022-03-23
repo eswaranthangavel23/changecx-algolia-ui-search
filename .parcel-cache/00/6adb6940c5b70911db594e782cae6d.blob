@@ -1,0 +1,185 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "INSTANT_SEARCH_INDEX_NAME", function () {
+  return INSTANT_SEARCH_INDEX_NAME;
+});
+_parcelHelpers.export(exports, "INSTANT_SEARCH_HIERARCHICAL_ATTRIBUTE", function () {
+  return INSTANT_SEARCH_HIERARCHICAL_ATTRIBUTE;
+});
+_parcelHelpers.export(exports, "search", function () {
+  return search;
+});
+_parcelHelpers.export(exports, "setInstantSearchUiState", function () {
+  return setInstantSearchUiState;
+});
+_parcelHelpers.export(exports, "debouncedSetInstantSearchUiState", function () {
+  return debouncedSetInstantSearchUiState;
+});
+_parcelHelpers.export(exports, "getInstantSearchCurrentCategory", function () {
+  return getInstantSearchCurrentCategory;
+});
+_parcelHelpers.export(exports, "getInstantSearchUrl", function () {
+  return getInstantSearchUrl;
+});
+_parcelHelpers.export(exports, "getInstantSearchUiState", function () {
+  return getInstantSearchUiState;
+});
+var _instantsearchJs = require('instantsearch.js');
+var _instantsearchJsDefault = _parcelHelpers.interopDefault(_instantsearchJs);
+var _instantsearchJsEsConnectors = require('instantsearch.js/es/connectors');
+var _instantsearchJsEsLibRoutersHistory = require('instantsearch.js/es/lib/routers/history');
+var _instantsearchJsEsLibRoutersHistoryDefault = _parcelHelpers.interopDefault(_instantsearchJsEsLibRoutersHistory);
+var _instantsearchJsEsWidgets = require('instantsearch.js/es/widgets');
+var _srcDebounce = require('../src/debounce');
+var _srcSearchClient = require('../src/searchClient');
+const INSTANT_SEARCH_INDEX_NAME = 'CTL_hermanmiller_products_data';
+const INSTANT_SEARCH_HIERARCHICAL_ATTRIBUTE = 'hierarchicalCategories.en.lvl1';
+const instantSearchRouter = _instantsearchJsEsLibRoutersHistoryDefault.default();
+const search = _instantsearchJsDefault.default({
+  searchClient: _srcSearchClient.searchClient,
+  indexName: INSTANT_SEARCH_INDEX_NAME,
+  routing: instantSearchRouter
+});
+const virtualSearchBox = _instantsearchJsEsConnectors.connectSearchBox(() => {});
+const hierarchicalMenuWithHeader = _instantsearchJsEsWidgets.panel({
+  templates: {
+    header: 'Categories'
+  }
+})(_instantsearchJsEsWidgets.hierarchicalMenu);
+search.addWidgets([_instantsearchJsEsWidgets.configure({
+  attributesToSnippet: ['name:7', 'description:15'],
+  snippetEllipsisText: '…'
+}), // Mount a virtual search box to manipulate InstantSearch's `query` UI
+// state parameter.
+virtualSearchBox(), hierarchicalMenuWithHeader({
+  container: '#categories',
+  attributes: [INSTANT_SEARCH_HIERARCHICAL_ATTRIBUTE, 'hierarchicalCategories.en.lvl2']
+}), _instantsearchJsEsWidgets.hits({
+  container: '#hits',
+  transformItems(items) {
+    console.log(items);
+    return items.map(item => ({
+      ...item,
+      name: item.name,
+      image: item.images[0].url,
+      category: "Furniture",
+      comments: "comments",
+      sale: 12,
+      // eslint-disable-next-line @typescript-eslint/camelcase
+      sale_price: 23
+    }));
+  },
+  templates: {
+    item: `
+        <article class="hit">
+          <div class="hit-image">
+            <img src="{{image}}" alt="{{name.en}}">
+          </div>
+          <div>
+            <h1>
+              {{name.en}}
+            </h1>
+            <div>            
+              By <strong>{{brand}}</strong> in <strong>{{category}}</strong>
+            </div>
+          </div>
+
+          <div
+            style="
+              display: grid;
+              grid-auto-flow: column;
+              justify-content: start;
+              align-items: center;
+              gap: 8px;
+            "
+          >
+            {{#rating}}
+              <div
+                style="
+                  display: grid;
+                  grid-auto-flow: column;
+                  justify-content: start;
+                  align-items: center;
+                  gap: 4px;
+                "
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="#e2a400"
+                  stroke="#e2a400"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+                {{rating}}
+              </div>
+            {{/rating}}
+
+            <div
+              style="
+                display: grid;
+                grid-auto-flow: column;
+                justify-content: start;
+                align-items: center;
+                gap: 4px;
+              "
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                style="
+                  position: relative;
+                  top: 1px;
+                "
+              >
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+              <span>{{comments}}</span>
+            </div>
+          </div>
+        </article>
+      `
+  }
+}), _instantsearchJsEsWidgets.pagination({
+  container: '#pagination',
+  padding: 2,
+  showFirst: false,
+  showLast: false
+})]);
+function setInstantSearchUiState(indexUiState) {
+  search.setUiState(uiState => ({
+    ...uiState,
+    [INSTANT_SEARCH_INDEX_NAME]: {
+      ...uiState[INSTANT_SEARCH_INDEX_NAME],
+      // We reset the page when the search state changes.
+      page: 1,
+      ...indexUiState
+    }
+  }));
+}
+const debouncedSetInstantSearchUiState = _srcDebounce.debounce(setInstantSearchUiState, 500);
+function getInstantSearchCurrentCategory() {
+  const indexUiState = search.getUiState()[INSTANT_SEARCH_INDEX_NAME];
+  const hierarchicalMenuUiState = indexUiState && indexUiState.hierarchicalMenu;
+  const currentCategories = hierarchicalMenuUiState && hierarchicalMenuUiState[INSTANT_SEARCH_HIERARCHICAL_ATTRIBUTE];
+  return currentCategories && currentCategories[1];
+}
+function getInstantSearchUrl(indexUiState) {
+  return search.createURL({
+    [INSTANT_SEARCH_INDEX_NAME]: indexUiState
+  });
+}
+function getInstantSearchUiState() {
+  const uiState = instantSearchRouter.read();
+  return uiState && uiState[INSTANT_SEARCH_INDEX_NAME] || ({});
+}
