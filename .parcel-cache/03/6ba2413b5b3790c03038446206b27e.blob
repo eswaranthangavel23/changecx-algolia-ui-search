@@ -1,0 +1,312 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "startAutocomplete", function () {
+  return startAutocomplete;
+});
+var _algoliaAutocompleteJs = require('@algolia/autocomplete-js');
+var _algoliaAutocompletePluginQuerySuggestions = require('@algolia/autocomplete-plugin-query-suggestions');
+var _algoliaAutocompletePluginRecentSearches = require('@algolia/autocomplete-plugin-recent-searches');
+var _preact = require('preact');
+var _instantsearch = require('./instantsearch');
+var _isModifierEvent = require('./isModifierEvent');
+var _searchClient = require('./searchClient');
+var _jsxFileName = "C:\\work\\changecx\\algolia\\changecx-algolia-ui-search\\src\\autocomplete.tsx";
+function onSelect({setIsOpen, setQuery, event, query, category}) {
+  // You want to trigger the default browser behavior if the event is modified.
+  if (_isModifierEvent.isModifierEvent(event)) {
+    return;
+  }
+  setQuery(query);
+  setIsOpen(false);
+  _instantsearch.setInstantSearchUiState({
+    query,
+    hierarchicalMenu: {
+      [_instantsearch.INSTANT_SEARCH_HIERARCHICAL_ATTRIBUTE]: [category]
+    }
+  });
+}
+function getItemUrl({query, category}) {
+  return _instantsearch.getInstantSearchUrl({
+    query,
+    hierarchicalMenu: {
+      [_instantsearch.INSTANT_SEARCH_HIERARCHICAL_ATTRIBUTE]: [category]
+    }
+  });
+}
+function ItemWrapper({children, query, category}) {
+  const uiState = {
+    query,
+    hierarchicalMenu: {
+      [_instantsearch.INSTANT_SEARCH_HIERARCHICAL_ATTRIBUTE]: [category]
+    }
+  };
+  return _preact.h("a", {
+    className: "aa-ItemLink",
+    href: _instantsearch.getInstantSearchUrl(uiState),
+    onClick: event => {
+      if (!_isModifierEvent.isModifierEvent(event)) {
+        // Bypass the original link behavior if there's no event modifier
+        // to set the InstantSearch UI state without reloading the page.
+        event.preventDefault();
+      }
+    },
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 53,
+      columnNumber: 5
+    }
+  }, children);
+}
+const recentSearchesPlugin = _algoliaAutocompletePluginRecentSearches.createLocalStorageRecentSearchesPlugin({
+  key: 'instantsearch',
+  limit: 3,
+  transformSource({source}) {
+    return {
+      ...source,
+      getItemUrl({item}) {
+        return getItemUrl({
+          query: item.label,
+          category: item.category
+        });
+      },
+      onSelect({setIsOpen, setQuery, item, event}) {
+        onSelect({
+          setQuery,
+          setIsOpen,
+          event,
+          query: item.label,
+          category: item.category
+        });
+      },
+      templates: {
+        ...source.templates,
+        // Update the default `item` template to wrap it with a link
+        // and plug it to the InstantSearch router.
+        // Update the default `item` template to wrap it with a link
+        // and plug it to the InstantSearch router.
+        item(params) {
+          const {children} = source.templates.item(params).props;
+          console.log(children);
+          return _preact.h(ItemWrapper, {
+            query: params.item.label,
+            category: params.item.category,
+            __self: this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 98,
+              columnNumber: 13
+            }
+          }, children);
+        }
+      }
+    };
+  }
+});
+const querySuggestionsPluginInCategory = _algoliaAutocompletePluginQuerySuggestions.createQuerySuggestionsPlugin({
+  searchClient: _searchClient.searchClient,
+  indexName: 'CTL_hermanmiller_products_data_query_suggestions',
+  getSearchParams() {
+    const currentCategory = _instantsearch.getInstantSearchCurrentCategory();
+    return recentSearchesPlugin.data.getAlgoliaSearchParams({
+      hitsPerPage: 3,
+      facetFilters: [`${_instantsearch.INSTANT_SEARCH_INDEX_NAME}.facets.exact_matches.${_instantsearch.INSTANT_SEARCH_HIERARCHICAL_ATTRIBUTE}.value:${currentCategory}`]
+    });
+  },
+  transformSource({source}) {
+    const currentCategory = _instantsearch.getInstantSearchCurrentCategory();
+    return {
+      ...source,
+      sourceId: 'querySuggestionsPluginInCategory',
+      getItemUrl({item}) {
+        return getItemUrl({
+          query: item.query,
+          category: currentCategory
+        });
+      },
+      onSelect({setIsOpen, setQuery, event, item}) {
+        onSelect({
+          setQuery,
+          setIsOpen,
+          event,
+          query: item.query,
+          category: currentCategory
+        });
+      },
+      getItems(params) {
+        if (!currentCategory) {
+          return [];
+        }
+        return source.getItems(params);
+      },
+      templates: {
+        ...source.templates,
+        header() {
+          return _preact.h(_preact.Fragment, {
+            __self: this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 156,
+              columnNumber: 13
+            }
+          }, _preact.h("span", {
+            className: "aa-SourceHeaderTitle",
+            __self: this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 157,
+              columnNumber: 15
+            }
+          }, "In ", currentCategory), _preact.h("div", {
+            className: "aa-SourceHeaderLine",
+            __self: this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 158,
+              columnNumber: 15
+            }
+          }));
+        },
+        item(params) {
+          const {children} = source.templates.item(params).props;
+          return _preact.h(ItemWrapper, {
+            query: params.item.query,
+            category: currentCategory,
+            __self: this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 166,
+              columnNumber: 13
+            }
+          }, children);
+        }
+      }
+    };
+  }
+});
+const querySuggestionsPlugin = _algoliaAutocompletePluginQuerySuggestions.createQuerySuggestionsPlugin({
+  searchClient: _searchClient.searchClient,
+  indexName: 'CTL_hermanmiller_products_data_query_suggestions',
+  getSearchParams() {
+    const currentCategory = _instantsearch.getInstantSearchCurrentCategory();
+    if (!currentCategory) {
+      return recentSearchesPlugin.data.getAlgoliaSearchParams({
+        hitsPerPage: 6
+      });
+    }
+    return recentSearchesPlugin.data.getAlgoliaSearchParams({
+      hitsPerPage: 3,
+      facetFilters: [`${_instantsearch.INSTANT_SEARCH_INDEX_NAME}.facets.exact_matches.${_instantsearch.INSTANT_SEARCH_HIERARCHICAL_ATTRIBUTE}.value:-${currentCategory}`]
+    });
+  },
+  categoryAttribute: [_instantsearch.INSTANT_SEARCH_INDEX_NAME, 'facets', 'exact_matches', _instantsearch.INSTANT_SEARCH_HIERARCHICAL_ATTRIBUTE],
+  transformSource({source}) {
+    const currentCategory = _instantsearch.getInstantSearchCurrentCategory();
+    return {
+      ...source,
+      sourceId: 'querySuggestionsPlugin',
+      getItemUrl({item}) {
+        return getItemUrl({
+          query: item.query,
+          category: item.__autocomplete_qsCategory
+        });
+      },
+      onSelect({setIsOpen, setQuery, event, item}) {
+        onSelect({
+          setQuery,
+          setIsOpen,
+          event,
+          query: item.query,
+          category: item.__autocomplete_qsCategory
+        });
+      },
+      getItems(params) {
+        if (!params.state.query) {
+          return [];
+        }
+        return source.getItems(params);
+      },
+      templates: {
+        ...source.templates,
+        header() {
+          if (!currentCategory) {
+            return null;
+          }
+          return _preact.h(_preact.Fragment, {
+            __self: this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 237,
+              columnNumber: 13
+            }
+          }, _preact.h("span", {
+            className: "aa-SourceHeaderTitle",
+            __self: this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 238,
+              columnNumber: 15
+            }
+          }, "In other categories"), _preact.h("div", {
+            className: "aa-SourceHeaderLine",
+            __self: this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 239,
+              columnNumber: 15
+            }
+          }));
+        },
+        item(params) {
+          const {children} = source.templates.item(params).props;
+          return _preact.h(ItemWrapper, {
+            query: params.item.query,
+            category: params.item.__autocomplete_qsCategory,
+            __self: this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 247,
+              columnNumber: 13
+            }
+          }, children);
+        }
+      }
+    };
+  }
+});
+const searchPageState = _instantsearch.getInstantSearchUiState();
+function startAutocomplete() {
+  _algoliaAutocompleteJs.autocomplete({
+    container: '#autocomplete',
+    placeholder: 'Search for products',
+    openOnFocus: true,
+    plugins: [recentSearchesPlugin, querySuggestionsPluginInCategory, querySuggestionsPlugin],
+    detachedMediaQuery: 'none',
+    initialState: {
+      query: searchPageState.query || ''
+    },
+    navigator: {
+      navigate() {}
+    },
+    onSubmit({state}) {
+      _instantsearch.setInstantSearchUiState({
+        query: state.query
+      });
+    },
+    onReset() {
+      _instantsearch.setInstantSearchUiState({
+        query: '',
+        hierarchicalMenu: {
+          [_instantsearch.INSTANT_SEARCH_HIERARCHICAL_ATTRIBUTE]: []
+        }
+      });
+    },
+    onStateChange({prevState, state}) {
+      if (prevState.query !== state.query) {
+        _instantsearch.debouncedSetInstantSearchUiState({
+          query: state.query
+        });
+      }
+    }
+  });
+}

@@ -140,9 +140,9 @@
       this[globalName] = mainExports;
     }
   }
-})({"1YFLS":[function(require,module,exports) {
+})({"2Hx2T":[function(require,module,exports) {
 var HMR_HOST = null;
-var HMR_PORT = 1234;
+var HMR_PORT = 58217;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d751713988987e9331980363e24189ce";
 module.bundle.HMR_BUNDLE_ID = "912fe0cf27f5dbf85fb30ee1d38910a9";
@@ -531,7 +531,7 @@ const recentSearchesPlugin = _algoliaAutocompletePluginRecentSearches.createLoca
             __self: this,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 98,
+              lineNumber: 97,
               columnNumber: 13
             }
           }, children);
@@ -542,11 +542,12 @@ const recentSearchesPlugin = _algoliaAutocompletePluginRecentSearches.createLoca
 });
 const querySuggestionsPluginInCategory = _algoliaAutocompletePluginQuerySuggestions.createQuerySuggestionsPlugin({
   searchClient: _searchClient.searchClient,
-  indexName: 'instant_search_demo_query_suggestions',
+  indexName: 'CTL_hermanmiller_products_data_query_suggestions',
   getSearchParams() {
     const currentCategory = _instantsearch.getInstantSearchCurrentCategory();
+    console.log(currentCategory, 'currentCategory');
     return recentSearchesPlugin.data.getAlgoliaSearchParams({
-      hitsPerPage: 3,
+      hitsPerPage: 10,
       facetFilters: [`${_instantsearch.INSTANT_SEARCH_INDEX_NAME}.facets.exact_matches.${_instantsearch.INSTANT_SEARCH_HIERARCHICAL_ATTRIBUTE}.value:${currentCategory}`]
     });
   },
@@ -556,6 +557,7 @@ const querySuggestionsPluginInCategory = _algoliaAutocompletePluginQuerySuggesti
       ...source,
       sourceId: 'querySuggestionsPluginInCategory',
       getItemUrl({item}) {
+        console.log(item.query);
         return getItemUrl({
           query: item.query,
           category: currentCategory
@@ -621,9 +623,18 @@ const querySuggestionsPluginInCategory = _algoliaAutocompletePluginQuerySuggesti
     };
   }
 });
+const querySuggestionsPluginDev = _algoliaAutocompletePluginQuerySuggestions.createQuerySuggestionsPlugin({
+  searchClient: _searchClient.searchClient,
+  indexName: 'CTL_hermanmiller_products_data_query_suggestions',
+  getSearchParams() {
+    return {
+      hitsPerPage: 10
+    };
+  }
+});
 const querySuggestionsPlugin = _algoliaAutocompletePluginQuerySuggestions.createQuerySuggestionsPlugin({
   searchClient: _searchClient.searchClient,
-  indexName: 'instant_search_demo_query_suggestions',
+  indexName: 'CTL_hermanmiller_products_data_query_suggestions',
   getSearchParams() {
     const currentCategory = _instantsearch.getInstantSearchCurrentCategory();
     if (!currentCategory) {
@@ -673,7 +684,7 @@ const querySuggestionsPlugin = _algoliaAutocompletePluginQuerySuggestions.create
             __self: this,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 237,
+              lineNumber: 246,
               columnNumber: 13
             }
           }, _preact.h("span", {
@@ -681,7 +692,7 @@ const querySuggestionsPlugin = _algoliaAutocompletePluginQuerySuggestions.create
             __self: this,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 238,
+              lineNumber: 247,
               columnNumber: 15
             }
           }, "In other categories"), _preact.h("div", {
@@ -689,7 +700,7 @@ const querySuggestionsPlugin = _algoliaAutocompletePluginQuerySuggestions.create
             __self: this,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 239,
+              lineNumber: 248,
               columnNumber: 15
             }
           }));
@@ -702,7 +713,7 @@ const querySuggestionsPlugin = _algoliaAutocompletePluginQuerySuggestions.create
             __self: this,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 247,
+              lineNumber: 256,
               columnNumber: 13
             }
           }, children);
@@ -717,7 +728,8 @@ function startAutocomplete() {
     container: '#autocomplete',
     placeholder: 'Search for products',
     openOnFocus: true,
-    plugins: [recentSearchesPlugin, querySuggestionsPluginInCategory, querySuggestionsPlugin],
+    plugins: [recentSearchesPlugin, querySuggestionsPluginDev, // querySuggestionsPluginInCategory,
+    querySuggestionsPlugin],
     detachedMediaQuery: 'none',
     initialState: {
       query: searchPageState.query || ''
@@ -51654,6 +51666,6 @@ function isModifierEvent(event) {
   return isMiddleClick || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey;
 }
 
-},{"@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}]},["1YFLS","5e1eZ"], "5e1eZ", "parcelRequire56cc")
+},{"@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}]},["2Hx2T","5e1eZ"], "5e1eZ", "parcelRequire56cc")
 
 //# sourceMappingURL=index.d38910a9.js.map

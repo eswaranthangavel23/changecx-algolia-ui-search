@@ -1,4 +1,4 @@
-21359
+21366
 86C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@types\q\package.json132924440046228835 0
 98C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\core-js\proposals\math-signbit.js121436361000000000 0
 89C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\core-js\es\array\find.js121436361000000000 0
@@ -93,7 +93,7 @@
 89C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\ajv\lib\dot\defaults.def121436361000000000 0
 93C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\is-data-descriptor\README.md130957661800000000 0
 99C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@parcel\utils\test\urlJoin.test.js121436361000000000 0
-56C:\work\changecx\algolia\changecx-algolia-ui-search\dist132924440529761110 1
+56C:\work\changecx\algolia\changecx-algolia-ui-search\dist132924929342733688 1
 78C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\object.assign132924440037779314 1
 87C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\lru-cache\package.json132924440027457743 0
 80C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\fast-deep-equal132924440043389783 1
@@ -226,7 +226,7 @@
 84C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\lodash\fp\pathEq.js121436361000000000 0
 101C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\core-js\modules\es.array.includes.js121436361000000000 0
 93C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\hex-color-regex\package.json132924440042202359 0
-61C:\work\changecx\algolia\changecx-algolia-ui-search\README.md132924430175753046 0
+61C:\work\changecx\algolia\changecx-algolia-ui-search\README.md132924441364166698 0
 89C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\relateurl\lib\options.js130631706580000000 0
 106C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\core-js\features\string\virtual\substr.js121436361000000000 0
 76C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\fs.realpath132924440042482173 1
@@ -237,7 +237,7 @@
 82C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\postcss-svgo\dist132924439864079783 1
 84C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\classnames\index.js121436361000000000 0
 74C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\lodash\fp132924439953247080 1
-72C:\work\changecx\algolia\changecx-algolia-ui-search\src\autocomplete.tsx132924198449811341 0
+72C:\work\changecx\algolia\changecx-algolia-ui-search\src\autocomplete.tsx132924929336367062 0
 124C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\postcss-calc\node_modules\postcss\lib\terminal-highlight.js121436361000000000 0
 102C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\core-js\stable\symbol\to-primitive.js121436361000000000 0
 106C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\stylehacks\dist\dictionary\identifiers.js121436361000000000 0
@@ -265,7 +265,7 @@
 87C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\lodash\_baseIsEqual.js121436361000000000 0
 112C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\postcss-normalize-timing-functions\package.json132924440033558710 0
 95C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\is-negative-zero\test\index.js121436361000000000 0
-72C:\work\changecx\algolia\changecx-algolia-ui-search\src\instantsearch.ts132924431317772238 0
+72C:\work\changecx\algolia\changecx-algolia-ui-search\src\instantsearch.ts132924835191433474 0
 77C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\safer-buffer132924440035323356 1
 89C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@parcel\reporter-cli\lib132924439864314021 1
 76C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\regjsparser132924440035881002 1
@@ -1993,6 +1993,7 @@
 110C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\css-tree\lib\definition-syntax\SyntaxError.js121436361000000000 0
 81C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\https-browserify132924440042278904 1
 126C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\postcss-reduce-transforms\node_modules\postcss\lib\comment.js121436361000000000 0
+74C:\work\changecx\algolia\changecx-algolia-ui-search\dist\index.d38910a9.js132924929342733688 0
 81C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\isarray\index.js130942154810000000 0
 131C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\regenerate-unicode-properties\Script_Extensions\Hanifi_Rohingya.js121436361000000000 0
 81C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\jsprim\README.md121436361000000000 0
@@ -2200,7 +2201,7 @@
 95C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\elliptic\lib\elliptic\utils.js121436361000000000 0
 101C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\is-fullwidth-code-point\package.json132924440040915096 0
 87C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\ripemd160\CHANGELOG.md131685915220000000 0
-87C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\svgo\node_modules\.bin132924440051945625 1
+87C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\svgo\node_modules\.bin132924440052026700 1
 112C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\regenerate-unicode-properties\Script\Osmanya.js121436361000000000 0
 127C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\postcss-reduce-initial\node_modules\postcss\lib\declaration.js121436361000000000 0
 120C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\caniuse-lite\data\features\es6-module-dynamic-import.js121436361000000000 0
@@ -3818,7 +3819,7 @@
 99C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\core-js\features\weak-map\index.js121436361000000000 0
 135C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\uncss\node_modules\postcss-selector-parser\dist\selectors\attribute.js121436361000000000 0
 102C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\resolve\test\node_path\y\bbb\index.js121436361000000000 0
-89C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\regjsparser\node_modules132924439998946696 1
+89C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\regjsparser\node_modules132924440051462040 1
 83C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\lodash\isSymbol.js121436361000000000 0
 111C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\caniuse-lite\data\features\css-supports-api.js121436361000000000 0
 93C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\core-js\actual\math\acosh.js121436361000000000 0
@@ -4844,7 +4845,7 @@
 73C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\svgo\lib132924439880632429 1
 99C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\postcss-convert-values\LICENSE-MIT121436361000000000 0
 77C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\svgo\LICENSE121436361000000000 0
-82C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\svgo\node_modules132924440022147362 1
+82C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\svgo\node_modules132924440051945625 1
 105C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\elliptic\node_modules\bn.js\package.json132924440043626688 0
 78C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\lodash\add.js121436361000000000 0
 83C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\parse-json\license131408182550000000 0
@@ -6207,7 +6208,7 @@
 93C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\core-js\stable\string\sub.js121436361000000000 0
 82C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\nth-check\LICENSE121436361000000000 0
 113C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\postcss-selector-parser\dist\selectors\guards.js121436361000000000 0
-96C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\resolve\test\resolver\symlinked132924439879256826 1
+96C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\resolve\test\resolver\symlinked132924439884178118 1
 102C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\resolve\test\resolver\without_basedir132924439899561729 1
 95C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@parcel\core\lib\buildCache.js121436361000000000 0
 111C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\purgecss\node_modules\postcss\lib\postcss.d.ts121436361000000000 0
@@ -6382,7 +6383,7 @@
 87C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\requires-port\index.js130906897020000000 0
 96C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\es-abstract\2020\DayFromYear.js121436361000000000 0
 86C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\requires-port\test.js130906897020000000 0
-88C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\jsdom\node_modules\.bin132924440050707803 1
+88C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\jsdom\node_modules\.bin132924440050714167 1
 91C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\request-promise-native\lib132924439874007547 1
 132C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\regenerate-unicode-properties\Script_Extensions\Zanabazar_Square.js121436361000000000 0
 89C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\es-abstract\2018\Type.js121436361000000000 0
@@ -7403,7 +7404,7 @@
 91C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\regenerate\LICENSE-MIT.txt121436361000000000 0
 115C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\postcss-merge-rules\node_modules\postcss\README.md121436361000000000 0
 130C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\postcss-normalize-display-values\node_modules\postcss\lib\node.js121436361000000000 0
-91C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\acorn-globals\node_modules132924439974734956 1
+91C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\acorn-globals\node_modules132924440049535788 1
 88C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\regenerate\package.json132924440035857226 0
 85C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\regenerate\README.md121436361000000000 0
 112C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\purgecss\node_modules\supports-color\browser.js121436361000000000 0
@@ -7444,6 +7445,7 @@
 87C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\lodash.clone\README.md131155832520000000 0
 111C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\purgecss\node_modules\postcss\lib\processor.js121436361000000000 0
 106C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\instantsearch.js\es\connectors\breadcrumb132924439942106792 1
+79C:\work\changecx\algolia\changecx-algolia-ui-search\dist\index.99eb6634.css.map132924929342672108 0
 113C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\readable-stream\lib\internal\streams\pipeline.js121436361000000000 0
 93C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\postcss-modules\CHANGELOG.md121436361000000000 0
 78C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\hogan.js\dist132924439907131424 1
@@ -9352,7 +9354,7 @@
 155C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\postcss-minify-selectors\node_modules\postcss-selector-parser\postcss-selector-parser.d.ts121436361000000000 0
 101C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\core-js\es\string\from-code-point.js121436361000000000 0
 136C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\postcss-minify-selectors\node_modules\postcss-selector-parser\README.md121436361000000000 0
-102C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@parcel\transformer-json\node_modules132924439974165742 1
+102C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@parcel\transformer-json\node_modules132924440049376105 1
 91C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\is-number-object\README.md121436361000000000 0
 88C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\optionator\lib\index.js132175495630000000 0
 120C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\jsdom\lib\jsdom\living\generated\HTMLDataListElement.js121436361000000000 0
@@ -10391,7 +10393,7 @@
 111C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\performance-now\test\scripts\difference.coffee131283154320000000 0
 85C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\lodash\curryRight.js121436361000000000 0
 95C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@babel\core\lib\transformation132924439887389543 1
-95C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@babel\preset-env\node_modules132924440015634187 1
+95C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@babel\preset-env\node_modules132924440049262379 1
 112C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@parcel\core\src\requests\ParcelBuildRequest.js121436361000000000 0
 88C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\node-gyp-build\index.js121436361000000000 0
 115C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\instantsearch.js\es\connectors\hits\connectHits.js132646941960000000 0
@@ -11276,7 +11278,7 @@
 116C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@babel\runtime\helpers\esm\interopRequireDefault.js121012626000000000 0
 91C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@nodelib\fs.walk\README.md121436361000000000 0
 82C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\lodash\isError.js121436361000000000 0
-94C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@algolia\autocomplete-js\dist132900884620000000 1
+94C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@algolia\autocomplete-js\dist132924439898121553 1
 83C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\lodash\isFinite.js121436361000000000 0
 116C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\csso\node_modules\css-tree\lib\syntax\pseudo\has.js121436361000000000 0
 89C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\is-negative-zero\.github132924439913257197 1
@@ -12115,7 +12117,7 @@
 82C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\jsesc\man\jsesc.1121436361000000000 0
 88C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@algolia\logger-console132924440025875550 1
 106C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@babel\types\lib\clone\cloneWithoutLoc.js121012626000000000 0
-83C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\jsdom\node_modules132924440023152534 1
+83C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\jsdom\node_modules132924440050629664 1
 120C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@babel\runtime\helpers\classCheckPrivateStaticAccess.js121012626000000000 0
 83C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\jsdom\package.json132924440027569079 0
 119C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\instantsearch.js\es\connectors\configure-related-items132924439942185923 1
@@ -12833,11 +12835,11 @@
 89C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\instantsearch.js\LICENSE132646941250000000 0
 141C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@algolia\cache-browser-local-storage\dist\cache-browser-local-storage.esm.js121436361000000000 0
 91C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\instantsearch.js\README.md132646941250000000 0
-89C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\instantsearch.js\scripts132646941250000000 1
+89C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\instantsearch.js\scripts132924439879009902 1
 100C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\instantsearch.js\scripts\transforms132924439935278326 1
 110C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\instantsearch.js\scripts\transforms\README.md132646941250000000 0
 95C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\highlight.js\scss\pojoaque.jpg121436361000000000 0
-117C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\instantsearch.js\scripts\transforms\__testfixtures__132646941250000000 1
+117C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\instantsearch.js\scripts\transforms\__testfixtures__132924439945871424 1
 110C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\instantsearch.js\scripts\transforms\__tests__132924439945906447 1
 142C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\instantsearch.js\scripts\transforms\__tests__\addWidget-to-addWidgets.test.js132646941250000000 0
 141C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\instantsearch.js\scripts\transforms\__testfixtures__\addWidget-to-addWidgets132924439946098592 1
@@ -14690,6 +14692,7 @@
 114C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\extend-shallow\node_modules\is-extendable\LICENSE131496356470000000 0
 85C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\extend\.editorconfig121436361000000000 0
 81C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\extend\.eslintrc121436361000000000 0
+74C:\work\changecx\algolia\changecx-algolia-ui-search\dist\index.e8622ece.js132924929342632934 0
 82C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\extend\.jscs.json121436361000000000 0
 79C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\extend\LICENSE121436361000000000 0
 106C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@parcel\reporter-dev-server\lib\Server.js121436361000000000 0
@@ -16536,7 +16539,7 @@
 93C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\core-js-compat\external.json121436361000000000 0
 90C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\core-js-compat\helpers.js121436361000000000 0
 88C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\core-js-compat\index.js121436361000000000 0
-92C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\core-js-compat\node_modules132924439992342162 1
+92C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\core-js-compat\node_modules132924440049795765 1
 89C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\core-js-compat\README.md121436361000000000 0
 97C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\core-js-compat\targets-parser.js121436361000000000 0
 109C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\core-js-compat\node_modules\semver\functions132924439934667867 1
@@ -18701,7 +18704,7 @@
 98C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\babel-plugin-polyfill-corejs2\esm132924439876596033 1
 102C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\babel-plugin-polyfill-corejs2\LICENSE121012626000000000 0
 101C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@parcel\core\test\fixtures\bundle.js121436361000000000 0
-107C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\babel-plugin-polyfill-corejs2\node_modules132924440013863619 1
+107C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\babel-plugin-polyfill-corejs2\node_modules132924440049756875 1
 107C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\babel-plugin-polyfill-corejs2\package.json132924440031658426 0
 104C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\babel-plugin-polyfill-corejs2\README.md121012626000000000 0
 114C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\babel-plugin-polyfill-corejs2\node_modules\semver132924440046183095 1
@@ -20504,6 +20507,7 @@
 109C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@babel\runtime\helpers\esm\AsyncGenerator.js121012626000000000 0
 117C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@babel\runtime\helpers\esm\asyncGeneratorDelegate.js121012626000000000 0
 111C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@babel\runtime\helpers\esm\asyncToGenerator.js121012626000000000 0
+78C:\work\changecx\algolia\changecx-algolia-ui-search\dist\index.d38910a9.js.map132924929342733688 0
 114C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@babel\runtime\helpers\esm\awaitAsyncGenerator.js121012626000000000 0
 105C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@babel\runtime\helpers\esm\AwaitValue.js121012626000000000 0
 129C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@babel\runtime\helpers\esm\classApplyDescriptorDestructureSet.js121012626000000000 0
@@ -20894,7 +20898,7 @@
 111C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@babel\helper-environment-visitor\lib\index.js121012626000000000 0
 107C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@babel\helper-define-polyfill-provider\esm132924439877158112 1
 111C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@babel\helper-define-polyfill-provider\LICENSE121012626000000000 0
-116C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@babel\helper-define-polyfill-provider\node_modules132924440013720667 1
+116C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@babel\helper-define-polyfill-provider\node_modules132924440049156541 1
 113C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@babel\helper-define-polyfill-provider\README.md121012626000000000 0
 121C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@babel\helper-define-polyfill-provider\node_modules\.bin132924440049156541 1
 123C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@babel\helper-define-polyfill-provider\node_modules\semver132924440026445589 1
@@ -20920,7 +20924,7 @@
 125C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@babel\helper-create-class-features-plugin\lib\typescript.js121012626000000000 0
 106C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@babel\helper-compilation-targets\LICENSE121012626000000000 0
 111C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@babel\helper-compilation-targets\node_modules132924440049093619 1
-106C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@algolia\autocomplete-preset-algolia\dist132900884380000000 1
+106C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@algolia\autocomplete-preset-algolia\dist132924439859619683 1
 111C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@babel\helper-compilation-targets\package.json132924440038578602 0
 116C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@babel\helper-compilation-targets\node_modules\.bin132924440049093619 1
 118C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@babel\helper-compilation-targets\node_modules\semver132924440026445589 1
@@ -21116,7 +21120,7 @@
 110C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@algolia\cache-browser-local-storage\index.js121436361000000000 0
 139C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@algolia\cache-browser-local-storage\dist\cache-browser-local-storage.d.ts121436361000000000 0
 119C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@algolia\autocomplete-theme-classic\dist\theme.min.css132900885360000000 0
-98C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@algolia\autocomplete-shared\dist132900884310000000 1
+98C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@algolia\autocomplete-shared\dist132924439859281219 1
 106C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@algolia\autocomplete-shared\package.json132924440025741175 0
 102C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@algolia\autocomplete-shared\dist\esm132924439867834192 1
 116C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@algolia\autocomplete-shared\dist\esm\debounce.d.ts132900885310000000 0
@@ -21167,7 +21171,7 @@
 136C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@algolia\autocomplete-preset-algolia\dist\esm\highlight\SnippetedHit.js132900885220000000 0
 131C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@algolia\autocomplete-preset-algolia\dist\esm\constants\index.d.ts132900885250000000 0
 129C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@algolia\autocomplete-preset-algolia\dist\esm\constants\index.js132900885220000000 0
-114C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@algolia\autocomplete-plugin-recent-searches\dist132900884750000000 1
+114C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@algolia\autocomplete-plugin-recent-searches\dist132924439861643020 1
 122C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@algolia\autocomplete-plugin-recent-searches\package.json132924440027301444 0
 119C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@algolia\autocomplete-plugin-recent-searches\README.md132900883530000000 0
 118C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@algolia\autocomplete-plugin-recent-searches\dist\umd132924439868328777 1
@@ -21185,7 +21189,7 @@
 133C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@algolia\autocomplete-plugin-recent-searches\dist\esm\types\index.js132900885090000000 0
 148C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@algolia\autocomplete-plugin-recent-searches\dist\esm\types\RecentSearchesItem.d.ts132900885110000000 0
 146C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@algolia\autocomplete-plugin-recent-searches\dist\esm\types\RecentSearchesItem.js132900885090000000 0
-116C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@algolia\autocomplete-plugin-query-suggestions\dist132900884820000000 1
+116C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@algolia\autocomplete-plugin-query-suggestions\dist132924439861643020 1
 120C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@algolia\autocomplete-plugin-query-suggestions\dist\esm132924439863190682 1
 120C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@algolia\autocomplete-plugin-query-suggestions\dist\umd132924439864723080 1
 140C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@algolia\autocomplete-plugin-query-suggestions\dist\umd\index.production.js132900884810000000 0
@@ -21244,7 +21248,7 @@
 129C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@algolia\autocomplete-js\dist\esm\components\ReverseSnippet.d.ts132900884960000000 0
 127C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@algolia\autocomplete-js\dist\esm\components\ReverseSnippet.js132900884920000000 0
 120C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@algolia\autocomplete-js\dist\esm\components\Snippet.js132900884920000000 0
-96C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@algolia\autocomplete-core\dist132900884480000000 1
+96C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@algolia\autocomplete-core\dist132924439859619683 1
 104C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@algolia\autocomplete-core\package.json132924440025895558 0
 101C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@algolia\autocomplete-core\README.md132900883530000000 0
 100C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\@algolia\autocomplete-core\dist\esm132924439868000943 1
@@ -21352,9 +21356,12 @@
 78C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\.bin\uuid.ps1132924440052409510 0
 79C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\.bin\which.cmd132924440052495735 0
 79C:\work\changecx\algolia\changecx-algolia-ui-search\node_modules\.bin\which.ps1132924440052548790 0
+77C:\work\changecx\algolia\changecx-algolia-ui-search\dist\favicon.481dfaa8.png132924929340636313 0
 77C:\work\changecx\algolia\changecx-algolia-ui-search\dist\favicon.9486cde1.png132924440474750476 0
 74C:\work\changecx\algolia\changecx-algolia-ui-search\dist\index.61894c67.js132924440529559084 0
 78C:\work\changecx\algolia\changecx-algolia-ui-search\dist\index.61894c67.js.map132924440529613461 0
+75C:\work\changecx\algolia\changecx-algolia-ui-search\dist\index.99eb6634.css132924929342632934 0
 74C:\work\changecx\algolia\changecx-algolia-ui-search\dist\index.a806d948.js132924440529613461 0
 79C:\work\changecx\algolia\changecx-algolia-ui-search\dist\index.db65668a.css.map132924440529613461 0
-67C:\work\changecx\algolia\changecx-algolia-ui-search\dist\index.html132924440529559084 0
+78C:\work\changecx\algolia\changecx-algolia-ui-search\dist\index.e8622ece.js.map132924929342672108 0
+67C:\work\changecx\algolia\changecx-algolia-ui-search\dist\index.html132924929342632934 0

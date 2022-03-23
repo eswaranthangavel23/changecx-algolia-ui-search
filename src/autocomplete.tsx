@@ -93,7 +93,6 @@ const recentSearchesPlugin = createLocalStorageRecentSearchesPlugin({
         // and plug it to the InstantSearch router.
         item(params) {
           const { children } = (source.templates.item(params) as any).props;
-
           return (
             <ItemWrapper
               query={params.item.label}
@@ -110,12 +109,12 @@ const recentSearchesPlugin = createLocalStorageRecentSearchesPlugin({
 
 const querySuggestionsPluginInCategory = createQuerySuggestionsPlugin({
   searchClient,
-  indexName: 'instant_search_demo_query_suggestions',
+  indexName: 'CTL_hermanmiller_products_data_query_suggestions',
   getSearchParams() {
     const currentCategory = getInstantSearchCurrentCategory();
-
+console.log(currentCategory,'currentCategory');
     return recentSearchesPlugin.data.getAlgoliaSearchParams({
-      hitsPerPage: 3,
+      hitsPerPage:10,
       facetFilters: [
         `${INSTANT_SEARCH_INDEX_NAME}.facets.exact_matches.${INSTANT_SEARCH_HIERARCHICAL_ATTRIBUTE}.value:${currentCategory}`,
       ],
@@ -128,6 +127,7 @@ const querySuggestionsPluginInCategory = createQuerySuggestionsPlugin({
       ...source,
       sourceId: 'querySuggestionsPluginInCategory',
       getItemUrl({ item }) {
+        console.log( item.query)
         return getItemUrl({
           query: item.query,
           category: currentCategory,
@@ -172,10 +172,19 @@ const querySuggestionsPluginInCategory = createQuerySuggestionsPlugin({
     };
   },
 });
+const querySuggestionsPluginDev = createQuerySuggestionsPlugin({
+  searchClient,
+  indexName: 'CTL_hermanmiller_products_data_query_suggestions',
+  getSearchParams() {
+    return {
+      hitsPerPage: 10,
+    };
+  },
+});
 
 const querySuggestionsPlugin = createQuerySuggestionsPlugin({
   searchClient,
-  indexName: 'instant_search_demo_query_suggestions',
+  indexName: 'CTL_hermanmiller_products_data_query_suggestions',
   getSearchParams() {
     const currentCategory = getInstantSearchCurrentCategory();
 
@@ -266,7 +275,8 @@ export function startAutocomplete() {
     openOnFocus: true,
     plugins: [
       recentSearchesPlugin,
-      querySuggestionsPluginInCategory,
+      querySuggestionsPluginDev,
+      // querySuggestionsPluginInCategory,
       querySuggestionsPlugin,
     ],
     detachedMediaQuery: 'none',
